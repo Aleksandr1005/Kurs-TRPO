@@ -1,7 +1,9 @@
-ERROR_OPTIONS=-Wall -Werror -Wextra
+RROR_OPTIONS=-Wall -Werror -Wextra
 
 all: bin/prog bin/test
 
+bin/prog: build/src/main.o
+	g++ -Wall -Werror build/src/main.o -o bin/prog -lm
 
 build/src/main.o: src/main.cpp
 	g++ -I -Wall -Werror -c src/main.cpp -o build/src/main.o
@@ -12,8 +14,9 @@ build/test/main.o: test/main.cpp
 build/test/test.o: test/test.cpp
 	g++ -I thirdparty -I src -Wall -Werror -c test/test.cpp -o build/test/test.o
 
-bin/test: build/test/main.o
-	g++ -Wall -Werror build/test/main.o -o bin/test -lm
+
+bin/test: build/test/test.o build/test/main.o
+	g++ -Wall -Werror build/test/test.o build/test/main.o -o bin/test -lm
 	./bin/test
 
 run:

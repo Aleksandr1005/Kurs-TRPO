@@ -121,7 +121,7 @@ int input_simple_word()
 int input_participle_word()
 {
     char ch, sl[100];
-    int word = 0, i = 0, c = 0, t = 0;
+    int word = 0, correct_part, i = 0, c = 0, t = 0;
     FILE* pr;
     pr = fopen("werbs.txt", "r");
     while ((ch = getc(pr)) != EOF) {
@@ -149,6 +149,9 @@ int input_participle_word()
 
 void correct()
 {
+    int i = 0, word = 0;
+    char ch;
+    FILE* pr;
     int simple = input_simple_word();
     int participle = input_participle_word();
     cout << endl << "===========================" << endl;
