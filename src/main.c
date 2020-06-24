@@ -35,6 +35,7 @@ int genering_word()
     }
     fclose(tf);
     fclose(pr);
+    return 0;
 }
 
 int output_inf_word()
@@ -52,6 +53,7 @@ int output_inf_word()
     }
     printf("\n");
     fclose(pr);
+    return 0;
 }
 
 int output_sim_word()
@@ -69,6 +71,7 @@ int output_sim_word()
     }
     printf("\n");
     fclose(pr);
+    return 0;
 }
 
 int output_part_word()
@@ -86,6 +89,7 @@ int output_part_word()
     }
     printf("\n");
     fclose(pr);
+    return 0;
 }
 
 int input_simple_word()
@@ -116,6 +120,7 @@ int input_simple_word()
         return 0;
     }
     fclose(pr);
+    return 0;
 }
 
 int input_participle_word()
@@ -146,6 +151,7 @@ int input_participle_word()
         return 0;
     }
     fclose(pr);
+    return 0;
 }
 
 int correct()
@@ -165,6 +171,7 @@ int correct()
     } else {
         printf("uncorrect");
     }
+    return 0;
 }
 
 int menu()
@@ -178,6 +185,7 @@ int menu()
         printf("\n End? y/n \n");
         scanf("%s", &ch);
     } while (ch != 'y');
+    return 0;
 }
 
 int main()
