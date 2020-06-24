@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-void genering_word()
+int genering_word()
 {
     int word = 0;
     char ch;
@@ -37,7 +37,7 @@ void genering_word()
     fclose(pr);
 }
 
-void output_inf_word()
+int output_inf_word()
 {
     char ch;
     int word = 0;
@@ -54,7 +54,7 @@ void output_inf_word()
     fclose(pr);
 }
 
-void output_sim_word()
+int output_sim_word()
 {
     char ch;
     int word = 0;
@@ -71,7 +71,7 @@ void output_sim_word()
     fclose(pr);
 }
 
-void output_part_word()
+int output_part_word()
 {
     char ch;
     int word = 0;
@@ -148,7 +148,7 @@ int input_participle_word()
     fclose(pr);
 }
 
-void correct()
+int correct()
 {
     int simple = input_simple_word();
     int participle = input_participle_word();
@@ -167,7 +167,7 @@ void correct()
     }
 }
 
-void menu()
+int menu()
 {
     char ch;
     do {
