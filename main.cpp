@@ -1,10 +1,9 @@
-#include <conio.h>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
+using namespace std;
 void genering_word()
 {
     int word = 0;
@@ -155,7 +154,7 @@ void correct()
     FILE* pr;
     int simple = input_simple_word();
     int participle = input_participle_word();
-    cout << endl « "===========================" << endl;
+    cout << endl << "===========================" << endl;
     cout << "Past Simple: ";
     if (simple == 1) {
         cout << "correct" << endl;
@@ -179,7 +178,7 @@ void menu()
         output_inf_word();
         correct();
         cout << "End? y/n " << endl;
-        ch = getch();
+        cin >> ch;
     } while (ch != 'y');
 }
 
