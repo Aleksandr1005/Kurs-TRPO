@@ -102,11 +102,12 @@ sl1[i] = ch;
 i++;
 }
 }
-char simple_word[100];
+char simple_word;
 printf("Past Simple: ");
-scanf("%s",&simple_word);
+scanf("%s", &simple_word);
+char* simp = &simple_word;
 for (t = 0; t < i; t++) {
-if (sl1[t] == simple_word[t])
+if (sl1[t] == simp[t])
 c++;
 }
 if (c == i) {
@@ -131,11 +132,12 @@ sl[i] = ch;
 i++;
 }
 }
-char participle_word[100];
+char participle_word;
 printf("Past Participle: ");
 scanf("%s", &participle_word);
+char* part = &participle_word;
 for (t = 0; t < i; t++) {
-if (sl[t] == participle_word[t])
+if (sl[t] == part[t])
 c++;
 }
 if (c == i) {
