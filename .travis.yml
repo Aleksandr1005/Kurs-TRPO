@@ -1,6 +1,6 @@
-language: c++
+language: c
 
-compiler: g++
+compiler: gcc
 
 dist: xenial
 
